@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: near-us
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/near-us
+    username: user
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+jwt:
+    secret: "zcomjyc8kHm6w1GUdFuK79yVITI0rt9T"
+    expiration: 86400000 # 1day
+
+application-security:
+  register:
+    token: "aGVsbG8tYnJvLWhvdy1hcmUteW91"
